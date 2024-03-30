@@ -1,0 +1,36 @@
+// MenuBar.scss
+.appBar {
+  width: 100%;
+}
+
+.toolBar {
+  display: flex;
+  justify-content: space-between; // 子要素を両端に配置
+  width: 100%;
+}
+
+.box1 {
+  text-align: left; // `.box1` のテキストを左揃え
+
+  @media (max-width: 600px) {
+    // スマホ表示用のスタイル調整が必要な場合、ここに追加
+  }
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row; // `.box2`内の要素を横並びに配置
+
+  @media (max-width: 600px) {
+    flex-direction: column; // スマホ表示では要素を縦に並べる
+    text-align: right;
+  }
+
+  .navItemText {
+    text-align: right;
+    @media (max-width: 600px) {
+    text-align: right; // テキストを右揃えにする
+    }
+  }
+
+}

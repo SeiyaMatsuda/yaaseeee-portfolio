@@ -1,0 +1,11 @@
+// MenuBar.scss
+.timelineBox {
+    justify-content: center; // 子要素を両端に配置
+    width: 60%;
+    align-items: center;
+    margin: 0 auto;
+    @media (max-width: 600px) {
+        width: 90%;
+    }
+  }
+

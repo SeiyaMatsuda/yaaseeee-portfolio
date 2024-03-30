@@ -1,0 +1,17 @@
+// MenuBar.scss
+.avatarBox {
+    display: flex;
+    justify-content: center; // 子要素を両端に配置
+    padding-top: 100px;
+  }
+
+.introBox {
+        justify-content: right; // 子要素を両端に配置
+        padding-top: 10px;
+        width: 60%;
+        align-items: center;
+        margin: 0 auto;
+        @media (max-width: 600px) {
+            width: 90%;
+        }
+    }

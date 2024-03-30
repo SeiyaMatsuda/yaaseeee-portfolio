@@ -1,19 +1,19 @@
-import React from 'react';
-import { Card, CardContent, Typography, Grid } from '@mui/material';
+import React from "react";
+import { Card, CardContent, Typography, Grid } from "@mui/material";
 
-type ContactDataProps = {
-    email: string;
-    phone: string;
-  };
+const email: string = "yaa.seeee1223@gmail.com";
 
-const ContactCard: React.FC<ContactDataProps> = (props) => {
+const ContactCard: React.FC = () => {
   return (
-        <div style={{ padding: '20px', border: '1px solid #ccc', marginTop: '10px' }}>
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> {props.email}</p>
-        <p><strong>Phone:</strong> {props.phone}</p>
-        </div>
+    <div
+      style={{ padding: "20px", border: "1px solid #ccc", marginTop: "10px" }}
+    >
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong> {email}
+      </p>
+    </div>
   );
-}
+};
 
 export default ContactCard;

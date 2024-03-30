@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import GoldMedal from "../img/kaggle_icon/gold_icon.png";
 import SilverMedal from "../img/kaggle_icon/silver_icon.png";
 import BronzeMedal from "../img/kaggle_icon/bronze_icon.png";
+import "./scss/Awards.scss"
 type CompetitionData = {
   medal: typeof GoldMedal | typeof SilverMedal | typeof BronzeMedal;
   name: string;
@@ -23,7 +24,7 @@ type CompetitionListProps = {
 
 const CreateCompetitionList: React.FC<CompetitionListProps> = (props) => {
   return (
-    <List sx={{ width: "100%", maxWidth: 600, bgcolor: "background.paper" }}>
+    <List sx={{bgcolor: "background.paper" }}>
       {props.competitions.map((competition) => (
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
@@ -46,7 +47,6 @@ const CreateCompetitionList: React.FC<CompetitionListProps> = (props) => {
                   {competition.year} {/* Display the year here */}
                 </Typography>
                 <Typography
-                  sx={{ display: "inline" }}
                   component="span"
                   variant="body2"
                   color="text.primary"
@@ -113,7 +113,7 @@ const AwardsList = () => {
   ];
   return (
     <>
-      <Box className="AwardsBox" mx="auto" height="auto" width={600} justifyContent="center">
+      <Box className="awardsBox">
         <Typography variant="h4" textAlign={"center"}>
           Awards
         </Typography>
@@ -129,7 +129,7 @@ const AwardsList = () => {
           <li>その他の受賞歴</li>
         </Typography>
         <List
-          sx={{ width: "100%", maxWidth: 600, bgcolor: "background.paper" }}
+          sx={{ width: "100%", maxWidth: "100%", bgcolor: "background.paper" }}
         >
           <ListItem alignItems="flex-start">
             <ListItemText

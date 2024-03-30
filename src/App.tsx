@@ -5,42 +5,11 @@ import MenueBar from './components/MenueBar';
 import YaaseeeAvatar from './components/MyAvatar';
 import PublishedPaperList from './components/Article'
 import AwardsList from './components/Awards';
-import HistoryTimeline from './components/Timline';
+import Carrer from './components/Carrer';
 import ContactCard from './components/Contact';
-import { createTheme , ThemeProvider} from '@mui/material';
+import theme from './components/theme';
 import CssBaseline from '@mui/material/CssBaseline';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#009688',
-    },
-    background: {
-      default: '#F1FADA',
-    },
-    text: { primary: '#333333' },
-  },
-  typography: {
-    h4: {
-      paddingTop: 30, 
-      color: "#2D9596",
-      fontWeight: "bold",
-      fontSize: "40px"
-    },
-  },
-  components: {
-    MuiAppBar: {
-      styleOverrides: {
-      root: {
-        // ここでAppBarのスタイルをカスタマイズできます
-        backgroundColor: '#265073', // 例: AppBarの背景色を上書き
-        color: '#FFFFFF'
-      }, 
-    }
-  }
-  }
-});
-
+import { ThemeProvider } from '@mui/material';
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -53,7 +22,7 @@ function App() {
             <YaaseeeAvatar />
           </div>
           <div id="career">
-            <HistoryTimeline />
+            <Carrer />
           </div>
           <div id="awards">
             <AwardsList />
@@ -62,7 +31,7 @@ function App() {
             <PublishedPaperList />
           </div>
           <div id="contact">
-            <ContactCard email="yaa.seeee1223@gmail.com" phone="080-8384-7071" />
+            <ContactCard />
           </div>
         </div>
     </ThemeProvider>

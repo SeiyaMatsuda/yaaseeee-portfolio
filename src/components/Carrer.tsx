@@ -8,7 +8,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
-
+import "./scss/Carrer.scss"
 type HistoryData = {
   diffinication: string;
   period: string;
@@ -33,10 +33,10 @@ const historyData: HistoryDataList = [
     period: "2022/04～現在",
   },
 ];
-const HistoryTimeline = () => {
+const Carrer = () => {
   return (
-    <Box mx="auto" height="auto" width={600} justifyContent="center">
-      <Typography variant="h4" textAlign={"center"}>
+    <Box className="timelineBox">
+      <Typography variant="h4">
         Carrer
       </Typography>
       <Timeline
@@ -72,4 +72,4 @@ const HistoryTimeline = () => {
   );
 };
 
-export default HistoryTimeline;
+export default Carrer;

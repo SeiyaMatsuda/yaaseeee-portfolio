@@ -1,0 +1,14 @@
+.awardsBox{
+    margin: 0 auto;
+    width: 60%;
+    justify-content: center;
+    @media (max-width: 600px) {
+        width: 90%;
+    }
+}
+
+.awardsItem{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
